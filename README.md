@@ -7,9 +7,9 @@
 
 ## Dependencies
 
-Packer Images
-Google Cloud Organization
-Assured Workloads folder
+- Packer Images
+- Google Cloud Organization
+- Assured Workloads folder
 
 ## Resource List
 
