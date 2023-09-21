@@ -11,13 +11,13 @@ The purpose of this module is to deploy bastions and a Linux host with Ansible-c
 
 - Packer Images
 - Add **Cloud Source Repositories** exception in **Organization Policies**
-    - In the Cloud Console, navigate to **Organization Policies** for management project
-    - Edit **Restrict Resource Service Usage** `constraints/gcp.restrictServiceUsage` policy
-    - Select **Merge with parent** for **Policy enforcement**
-    - Add a new rule
-    - Select **Custom** for **Policy values**
-    - Select **Allow** for **Policy type**
-    - Add **Custom value** of `sourcerepo.googleapis.com`
+  - In the Cloud Console, navigate to **Organization Policies** for management project
+  - Edit **Restrict Resource Service Usage** `constraints/gcp.restrictServiceUsage` policy
+  - Select **Merge with parent** for **Policy enforcement**
+  - Add a new rule
+  - Select **Custom** for **Policy values**
+  - Select **Allow** for **Policy type**
+  - Add **Custom value** of `sourcerepo.googleapis.com`
 
 ## Deployment Steps
 
@@ -25,13 +25,13 @@ The purpose of this module is to deploy bastions and a Linux host with Ansible-c
 
 Use the example below, replacing it with your values, and save it as `terraform.tfvars`.
 
-```
+``` hcl
 state_bucket        = "your-state-bucket"
 ```
 
 Use the example below, replacing it with your values, and save it as `backend.tfvars`.
 
-```
+``` hcl
 bucket = "your-state-bucket"
 prefix = "terraform/bastions-ansible"
 ```
@@ -40,7 +40,7 @@ prefix = "terraform/bastions-ansible"
 
 Run Terraform init and apply.
 
-```
+``` hcl
 terraform init -backend-config=backend.tfvars
 terraform apply -var-file=terraform.tfvars
 ```
