@@ -1,7 +1,7 @@
 module "public" {
-  source = "github.com/Coalfire-CF/ACE-GCP-Network"
+  source = "github.com/Coalfire-CF/terraform-google-network"
 
-  project_id   = data.terraform_remote_state.bootstrap.outputs.networking_project_id
+  project_id   = data.terraform_remote_state.security-core.outputs.networking_project_id
   network_name = "${var.vpc_prefix}-public"
 
   subnets = [
@@ -14,9 +14,9 @@ module "public" {
 }
 
 module "management" {
-  source = "github.com/Coalfire-CF/ACE-GCP-Network"
+  source = "github.com/Coalfire-CF/terraform-google-network"
 
-  project_id      = data.terraform_remote_state.bootstrap.outputs.networking_project_id
+  project_id      = data.terraform_remote_state.security-core.outputs.networking_project_id
   network_name    = "${var.vpc_prefix}-management"
   shared_vpc_host = true
 
@@ -30,9 +30,9 @@ module "management" {
 }
 
 module "private" {
-  source = "github.com/Coalfire-CF/ACE-GCP-Network"
+  source = "github.com/Coalfire-CF/terraform-google-network"
 
-  project_id   = data.terraform_remote_state.bootstrap.outputs.networking_project_id
+  project_id   = data.terraform_remote_state.security-core.outputs.networking_project_id
   network_name = "${var.vpc_prefix}-private"
 
   subnets = [
@@ -75,7 +75,7 @@ module "private" {
 }
 
 module "private-management-peering" {
-  source = "github.com/Coalfire-CF/ACE-GCP-Network/modules/network-peering"
+  source = "github.com/Coalfire-CF/terraform-google-network/modules/network-peering"
 
   prefix        = "${var.peer_prefix}-${module.private.network_name}-${module.management.network_name}"
   local_network = module.private.network_self_link
@@ -85,7 +85,7 @@ module "private-management-peering" {
 module "private-service-access" {
   source = "github.com/Coalfire-CF/ACE-GCP-Private-Service-Access"
 
-  project_id = data.terraform_remote_state.bootstrap.outputs.networking_project_id
+  project_id = data.terraform_remote_state.security-core.outputs.networking_project_id
 
   network       = module.private.network_name
   name          = "${var.subnet_prefix}-private-psa"
@@ -97,7 +97,7 @@ module "private-service-access" {
 resource "google_compute_subnetwork" "private_l7lb" {
   provider = google-beta
 
-  project       = data.terraform_remote_state.bootstrap.outputs.networking_project_id
+  project       = data.terraform_remote_state.security-core.outputs.networking_project_id
   region        = var.region
   name          = "${var.subnet_prefix}-private-proxy"
   purpose       = "INTERNAL_HTTPS_LOAD_BALANCER"
@@ -107,6 +107,6 @@ resource "google_compute_subnetwork" "private_l7lb" {
 }
 
 resource "google_compute_shared_vpc_service_project" "networking_management" {
-  host_project    = data.terraform_remote_state.bootstrap.outputs.networking_project_id
-  service_project = data.terraform_remote_state.bootstrap.outputs.management_project_id
+  host_project    = data.terraform_remote_state.security-core.outputs.networking_project_id
+  service_project = data.terraform_remote_state.security-core.outputs.management_project_id
 }

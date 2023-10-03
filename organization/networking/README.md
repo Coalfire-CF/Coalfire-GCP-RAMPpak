@@ -72,7 +72,7 @@ terraform apply -var-file=terraform.tfvars
 | [google-beta_google_compute_subnetwork.private_l7lb](https://registry.terraform.io/providers/hashicorp/google-beta/latest/docs/resources/google_compute_subnetwork) | resource |
 | [google_compute_shared_vpc_service_project.networking_management](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_shared_vpc_service_project) | resource |
 | [google_dns_policy.dns_logging](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/dns_policy) | resource |
-| [terraform_remote_state.bootstrap](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
+| [terraform_remote_state.security-core](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 
 ## Inputs
 
@@ -142,7 +142,7 @@ terraform apply -var-file=terraform.tfvars
 | [google-beta_google_compute_subnetwork.private_l7lb](https://registry.terraform.io/providers/hashicorp/google-beta/latest/docs/resources/google_compute_subnetwork) | resource |
 | [google_compute_shared_vpc_service_project.networking_management](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_shared_vpc_service_project) | resource |
 | [google_dns_policy.dns_logging](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/dns_policy) | resource |
-| [terraform_remote_state.bootstrap](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
+| [terraform_remote_state.security-core](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 
 ## Inputs
 
