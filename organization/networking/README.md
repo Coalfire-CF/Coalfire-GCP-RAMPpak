@@ -9,7 +9,7 @@ The purpose of this module is to deploy the cloud networking components to suppo
 
 ## Dependencies
 
-- Organization Bootstrap
+- Security Core
 
 ## Deployment Steps
 

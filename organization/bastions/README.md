@@ -1,23 +1,12 @@
 # Setup Bastions and Ansible
 
-The purpose of this module is to deploy bastions and a Linux host with Ansible-cli (core) installed. This module will create:
+The purpose of this module is to deploy bastions. This module will create:
 
-- Cloud Source Repository to store Ansible code
-- Windows bastion to establish an RDP session into the environment
-- Linux bastion primarily to serve as an SSH forwarder to the Ansible CLI host
-- Linux instance with Ansible + Collections installed to configure the internal environment
+- Bastion to establish a session into the environment
 
 ## Dependencies
 
-- Packer Images
-- Add **Cloud Source Repositories** exception in **Organization Policies**
-  - In the Cloud Console, navigate to **Organization Policies** for management project
-  - Edit **Restrict Resource Service Usage** `constraints/gcp.restrictServiceUsage` policy
-  - Select **Merge with parent** for **Policy enforcement**
-  - Add a new rule
-  - Select **Custom** for **Policy values**
-  - Select **Allow** for **Policy type**
-  - Add **Custom value** of `sourcerepo.googleapis.com`
+- Networking
 
 ## Deployment Steps
 
@@ -44,13 +33,6 @@ Run Terraform init and apply.
 terraform init -backend-config=backend.tfvars
 terraform apply -var-file=terraform.tfvars
 ```
-
-### Configuration
-
-1. Open the **ansible** [Cloud Source Repositories](https://source.cloud.google.com/) repository in a web browser.
-2. On the **Add code to your repository** screen, choose **Manually generate credentials** and follow the link to **Generate and store your Git credentials**.
-3. Push the Ansible playbooks into the **ansible** Cloud Source Repositories repository.
-4. Open **Compute Engine** in the [Cloud Console](https://console.cloud.google.com/) and set the Windows password for **administrator** user on **winbastion** instance and add to `winbastion-administrator` secret in Secret Manager.
 
 ## Requirements
 
