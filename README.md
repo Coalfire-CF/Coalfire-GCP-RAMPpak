@@ -35,7 +35,7 @@ Learn more at [Coalfire OpenSource](https://coalfire.com/opensource).
 1. Dependencies
 2. [Security Core](organization/security-core/README.md)
 3. [Networking Setup](organization/networking/README.md)
-5. [Bastions and Ansible](organization/bastions-ansible/README.md)
+5. [Bastions](organization/bastions/README.md)
 
 ## Deployment Configurations
 
