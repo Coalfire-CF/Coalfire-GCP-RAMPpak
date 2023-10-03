@@ -47,7 +47,7 @@ Use the example below, replacing it with your values, and save it as `backend.tf
 
 ```
 bucket = "your-state-bucket"
-prefix = "terraform/bootstrap"
+prefix = "terraform/security-core"
 ```
 
 Re-run Terraform init to migrate the state file.
