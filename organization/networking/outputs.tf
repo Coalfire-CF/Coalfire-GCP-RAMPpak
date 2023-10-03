@@ -1,5 +1,5 @@
 output "domain_name" {
-  description = "Active Directory domain name"
+  description = "Domain name"
   value       = var.domain_name
 }
 

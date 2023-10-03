@@ -22,7 +22,7 @@ variable "remote_access_cidrs" {
 }
 
 variable "domain_name" {
-  description = "Active Directory domain name"
+  description = "Domain name"
   type        = string
 }
 
