@@ -101,3 +101,51 @@ No resources.
 | <a name="output_networking_project_id"></a> [networking\_project\_id](#output\_networking\_project\_id) | n/a |
 | <a name="output_sql_kms_key_id"></a> [sql\_kms\_key\_id](#output\_sql\_kms\_key\_id) | n/a |
 | <a name="output_winbastion-administrator"></a> [winbastion-administrator](#output\_winbastion-administrator) | n/a |
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_google"></a> [google](#requirement\_google) | 4.70.0 |
+
+## Providers
+
+No providers.
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_security-core"></a> [security-core](#module\_security-core) | github.com/Coalfire-CF/ACE-GCP-Security-Core | n/a |
+
+## Resources
+
+No resources.
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_aw_folder_id"></a> [aw\_folder\_id](#input\_aw\_folder\_id) | Assured Workloads folder ID | `string` | n/a | yes |
+| <a name="input_billing_account"></a> [billing\_account](#input\_billing\_account) | The ID of the billing account to associate projects with. | `string` | n/a | yes |
+| <a name="input_group_org_admins"></a> [group\_org\_admins](#input\_group\_org\_admins) | Google Group for GCP Organization Administrators | `string` | n/a | yes |
+| <a name="input_management_services"></a> [management\_services](#input\_management\_services) | APIs & Services to enable for management project. | `list(string)` | <pre>[<br>  "cloudkms.googleapis.com",<br>  "compute.googleapis.com",<br>  "logging.googleapis.com",<br>  "monitoring.googleapis.com",<br>  "pubsub.googleapis.com",<br>  "secretmanager.googleapis.com",<br>  "sourcerepo.googleapis.com"<br>]</pre> | no |
+| <a name="input_networking_services"></a> [networking\_services](#input\_networking\_services) | APIs & Services to enable for networking project. | `list(string)` | <pre>[<br>  "compute.googleapis.com",<br>  "dns.googleapis.com",<br>  "logging.googleapis.com",<br>  "servicenetworking.googleapis.com"<br>]</pre> | no |
+| <a name="input_org_id"></a> [org\_id](#input\_org\_id) | GCP Organization ID | `string` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | The GCP region to create resources in. | `string` | `"us-east1"` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_gce-ssh-private-key"></a> [gce-ssh-private-key](#output\_gce-ssh-private-key) | n/a |
+| <a name="output_gce_kms_key_id"></a> [gce\_kms\_key\_id](#output\_gce\_kms\_key\_id) | n/a |
+| <a name="output_gcs_kms_key_id"></a> [gcs\_kms\_key\_id](#output\_gcs\_kms\_key\_id) | n/a |
+| <a name="output_group_org_admins"></a> [group\_org\_admins](#output\_group\_org\_admins) | n/a |
+| <a name="output_gsm_kms_key_id"></a> [gsm\_kms\_key\_id](#output\_gsm\_kms\_key\_id) | n/a |
+| <a name="output_management_project_id"></a> [management\_project\_id](#output\_management\_project\_id) | n/a |
+| <a name="output_networking_project_id"></a> [networking\_project\_id](#output\_networking\_project\_id) | n/a |
+| <a name="output_sql_kms_key_id"></a> [sql\_kms\_key\_id](#output\_sql\_kms\_key\_id) | n/a |
+| <a name="output_winbastion-administrator"></a> [winbastion-administrator](#output\_winbastion-administrator) | n/a |
+<!-- END_TF_DOCS -->
