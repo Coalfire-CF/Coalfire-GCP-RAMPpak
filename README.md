@@ -60,32 +60,6 @@ Each folder, e.x. `organization/bootstrap` has a README that provides configurat
 - [Google Cloud FedRAMP implementation guide](https://cloud.google.com/architecture/fedramp-implementation-guide)
 - [Google Cloud services and authorized regions that are covered by FedRAMP](https://cloud.google.com/security/compliance/fedramp)
 
-<!-- BEGIN_TF_DOCS -->
-## Requirements
-
-No requirements.
-
-## Providers
-
-No providers.
-
-## Modules
-
-No modules.
-
-## Resources
-
-No resources.
-
-## Inputs
-
-No inputs.
-
-## Outputs
-
-No outputs.
-<!-- END_TF_DOCS -->
-
 ## Contributing
 
 [Relative or absolute link to contributing.md](CONTRIBUTING.md)
