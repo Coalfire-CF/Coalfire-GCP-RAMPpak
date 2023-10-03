@@ -1,4 +1,4 @@
-# Setup Bastions and Ansible
+# Setup Bastions
 
 The purpose of this module is to deploy bastions. This module will create:
 
@@ -22,7 +22,7 @@ Use the example below, replacing it with your values, and save it as `backend.tf
 
 ``` hcl
 bucket = "your-state-bucket"
-prefix = "terraform/bastions-ansible"
+prefix = "terraform/bastions"
 ```
 
 ### Run Terraform
