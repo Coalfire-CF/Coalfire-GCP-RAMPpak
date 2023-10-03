@@ -5,7 +5,7 @@
 
 # Coalfire GCP RAMPpak
 
-Coalfire created reference architecture for FedRAMP Google Cloud builds. This repository is used as a parent directory to deploy `Coalfire-CF/terraform-gcp-<service>` modules.
+Coalfire created reference architecture for FedRAMP Google Cloud builds. This repository is used as a parent directory to deploy `Coalfire-CF/terraform-google-<service>` modules.
 
 Learn more at [Coalfire OpenSource](https://coalfire.com/opensource).
 
