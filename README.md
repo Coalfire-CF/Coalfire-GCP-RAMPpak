@@ -38,7 +38,7 @@ Learn more at [Coalfire OpenSource](https://coalfire.com/opensource).
 
 ## Deployment Configurations
 
-Each folder, e.x. `organization/bootstrap` has a README that provides configuration steps, documents outputs, dependencies, and other notes on each component in the environment.
+Each folder, e.x. `organization/security-core` has a README that provides configuration steps, documents outputs, dependencies, and other notes on each component in the environment.
 
 ### Modifications when new Admins are added
 

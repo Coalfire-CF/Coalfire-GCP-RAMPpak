@@ -67,7 +67,7 @@ terraform apply -var-file=terraform.tfvars
 | [google_compute_image.rhel_golden](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/compute_image) | data source |
 | [google_compute_image.windows_golden](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/compute_image) | data source |
 | [google_compute_zones.available](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/compute_zones) | data source |
-| [terraform_remote_state.bootstrap](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
+| [terraform_remote_state.security-core](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 | [terraform_remote_state.networking](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 
 ## Inputs
@@ -118,7 +118,7 @@ terraform apply -var-file=terraform.tfvars
 | [google_compute_image.rhel_golden](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/compute_image) | data source |
 | [google_compute_image.windows_golden](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/compute_image) | data source |
 | [google_compute_zones.available](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/compute_zones) | data source |
-| [terraform_remote_state.bootstrap](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
+| [terraform_remote_state.security-core](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 | [terraform_remote_state.networking](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 
 ## Inputs

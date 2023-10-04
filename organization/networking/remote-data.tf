@@ -1,7 +1,7 @@
-data "terraform_remote_state" "bootstrap" {
+data "terraform_remote_state" "security-core" {
   backend = "gcs"
   config = {
     bucket = var.state_bucket
-    prefix = "terraform/bootstrap"
+    prefix = "terraform/security-core"
   }
 }
