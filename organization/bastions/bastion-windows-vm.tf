@@ -1,13 +1,13 @@
 resource "google_compute_address" "windows_ip_address" {
-  project = data.terraform_remote_state.bootstrap.outputs.management_project_id
-  region  = "us-east1"
+  project = data.terraform_remote_state.security-core.outputs.management_project_id
+  region  = var.region
   name    = "winbastion-external-ip"
 }
 
 module "windows-bastion" {
-  source = "github.com/Coalfire-CF/ACE-GCP-VM"
+  source = "github.com/Coalfire-CF/terraform-google-vm"
 
-  project_id = data.terraform_remote_state.bootstrap.outputs.management_project_id
+  project_id = data.terraform_remote_state.security-core.outputs.management_project_id
 
   name        = "winbastion"
   domain_name = data.terraform_remote_state.networking.outputs.domain_name
@@ -17,7 +17,7 @@ module "windows-bastion" {
   source_image        = data.google_compute_image.windows_golden.self_link
   disk_size_gb        = 50
   windows             = true
-  disk_encryption_key = data.terraform_remote_state.bootstrap.outputs.gce_kms_key_id
+  disk_encryption_key = data.terraform_remote_state.security-core.outputs.gce_kms_key_id
 
   zones      = [data.google_compute_zones.available.names[0]]
   subnetwork = data.terraform_remote_state.networking.outputs.subnets_private["dmz"]
