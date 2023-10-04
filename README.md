@@ -8,6 +8,10 @@ Learn more at [Coalfire OpenSource](https://coalfire.com/opensource).
 
 [Get our SSP Templates and Reference Architecture Design Document Template](https://www.coalfire.com/services/fedramp/ramp-pak-documentation)
 
+## Architecture
+
+![Architecture](Coalfire-GCP-RAMPpak.png)
+
 ## Tooling
 
 - [gcloud CLI](https://cloud.google.com/sdk/gcloud) (435.0.0)
