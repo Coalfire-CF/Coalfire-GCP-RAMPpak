@@ -127,13 +127,13 @@ terraform apply -var-file=terraform.tfvars
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_cloud_router"></a> [cloud\_router](#module\_cloud\_router) | github.com/Coalfire-CF/ACE-GCP-Cloud-Router | n/a |
-| <a name="module_management"></a> [management](#module\_management) | github.com/Coalfire-CF/ACE-GCP-Network | n/a |
-| <a name="module_private"></a> [private](#module\_private) | github.com/Coalfire-CF/ACE-GCP-Network | n/a |
-| <a name="module_private-fw"></a> [private-fw](#module\_private-fw) | github.com/Coalfire-CF/ACE-GCP-Network/modules/firewall-rules | n/a |
-| <a name="module_private-management-peering"></a> [private-management-peering](#module\_private-management-peering) | github.com/Coalfire-CF/ACE-GCP-Network/modules/network-peering | n/a |
+| <a name="module_cloud_router"></a> [cloud\_router](#module\_cloud\_router) | github.com/Coalfire-CF/terraform-google-cloud-router | n/a |
+| <a name="module_management"></a> [management](#module\_management) | github.com/Coalfire-CF/terraform-google-network | n/a |
+| <a name="module_private"></a> [private](#module\_private) | github.com/Coalfire-CF/terraform-google-network | n/a |
+| <a name="module_private-fw"></a> [private-fw](#module\_private-fw) | github.com/Coalfire-CF/terraform-google-network/modules/firewall-rules | n/a |
+| <a name="module_private-management-peering"></a> [private-management-peering](#module\_private-management-peering) | github.com/Coalfire-CF/terraform-google-network/modules/network-peering | n/a |
 | <a name="module_private-service-access"></a> [private-service-access](#module\_private-service-access) | github.com/Coalfire-CF/ACE-GCP-Private-Service-Access | n/a |
-| <a name="module_public"></a> [public](#module\_public) | github.com/Coalfire-CF/ACE-GCP-Network | n/a |
+| <a name="module_public"></a> [public](#module\_public) | github.com/Coalfire-CF/terraform-google-network | n/a |
 
 ## Resources
 

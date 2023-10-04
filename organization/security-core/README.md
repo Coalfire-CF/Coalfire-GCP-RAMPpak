@@ -117,7 +117,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_security-core"></a> [security-core](#module\_security-core) | github.com/Coalfire-CF/ACE-GCP-Security-Core | n/a |
+| <a name="module_security-core"></a> [security-core](#module\_security-core) | github.com/Coalfire-CF/terraform-google-security-core | n/a |
 
 ## Resources
 

@@ -105,21 +105,18 @@ terraform apply -var-file=terraform.tfvars
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_bastion-svc-acct"></a> [bastion-svc-acct](#module\_bastion-svc-acct) | github.com/Coalfire-CF/ACE-GCP-Service-Account | n/a |
-| <a name="module_linux-bastion"></a> [linux-bastion](#module\_linux-bastion) | github.com/Coalfire-CF/ACE-GCP-VM | n/a |
-| <a name="module_windows-bastion"></a> [windows-bastion](#module\_windows-bastion) | github.com/Coalfire-CF/ACE-GCP-VM | n/a |
+| <a name="module_bastion-svc-acct"></a> [bastion-svc-acct](#module\_bastion-svc-acct) | github.com/Coalfire-CF/terraform-google-service-account | n/a |
+| <a name="module_windows-bastion"></a> [windows-bastion](#module\_windows-bastion) | github.com/Coalfire-CF/terraform-google-vm | n/a |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [google_compute_address.linux_ip_address](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_address) | resource |
 | [google_compute_address.windows_ip_address](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_address) | resource |
-| [google_compute_image.rhel_golden](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/compute_image) | data source |
 | [google_compute_image.windows_golden](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/compute_image) | data source |
 | [google_compute_zones.available](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/compute_zones) | data source |
-| [terraform_remote_state.security-core](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 | [terraform_remote_state.networking](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
+| [terraform_remote_state.security-core](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 
 ## Inputs
 
@@ -132,6 +129,5 @@ terraform apply -var-file=terraform.tfvars
 
 | Name | Description |
 |------|-------------|
-| <a name="output_linbastion_link"></a> [linbastion\_link](#output\_linbastion\_link) | n/a |
 | <a name="output_winbastion_link"></a> [winbastion\_link](#output\_winbastion\_link) | n/a |
 <!-- END_TF_DOCS -->
