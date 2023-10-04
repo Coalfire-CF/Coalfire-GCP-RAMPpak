@@ -74,28 +74,3 @@ If you're interested in contributing to our projects, please review the [Contrib
 ### Copyright
 
 Copyright © 2023 Coalfire Systems Inc.
-<!-- BEGIN_TF_DOCS -->
-## Requirements
-
-No requirements.
-
-## Providers
-
-No providers.
-
-## Modules
-
-No modules.
-
-## Resources
-
-No resources.
-
-## Inputs
-
-No inputs.
-
-## Outputs
-
-No outputs.
-<!-- END_TF_DOCS -->
