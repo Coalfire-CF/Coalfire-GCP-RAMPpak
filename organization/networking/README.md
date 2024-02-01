@@ -65,6 +65,9 @@ terraform apply -var-file=terraform.tfvars
 | <a name="module_private-management-peering"></a> [private-management-peering](#module\_private-management-peering) | github.com/Coalfire-CF/terraform-google-network/modules/network-peering | n/a |
 | <a name="module_private-service-access"></a> [private-service-access](#module\_private-service-access) | github.com/Coalfire-CF/ACE-GCP-Private-Service-Access | n/a |
 | <a name="module_public"></a> [public](#module\_public) | github.com/Coalfire-CF/terraform-google-network | n/a |
+| <a name="module_subnets_management"></a> [subnets\_management](#module\_subnets\_management) | hashicorp/subnets/cidr | n/a |
+| <a name="module_subnets_private"></a> [subnets\_private](#module\_subnets\_private) | hashicorp/subnets/cidr | n/a |
+| <a name="module_subnets_public"></a> [subnets\_public](#module\_subnets\_public) | hashicorp/subnets/cidr | n/a |
 
 ## Resources
 
@@ -82,7 +85,9 @@ terraform apply -var-file=terraform.tfvars
 | <a name="input_dns_prefix"></a> [dns\_prefix](#input\_dns\_prefix) | Prefix for DNS. | `string` | `"dns"` | no |
 | <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | Domain name | `string` | n/a | yes |
 | <a name="input_firewall_prefix"></a> [firewall\_prefix](#input\_firewall\_prefix) | Prefix for firewall rules. | `string` | `"fw"` | no |
-| <a name="input_ip_network_mgmt"></a> [ip\_network\_mgmt](#input\_ip\_network\_mgmt) | Network part of management CIDR | `string` | `"10.2"` | no |
+| <a name="input_ip_network_management"></a> [ip\_network\_management](#input\_ip\_network\_management) | Network part of management CIDR | `string` | `"10.1.0.0/16"` | no |
+| <a name="input_ip_network_private"></a> [ip\_network\_private](#input\_ip\_network\_private) | Network part of private CIDR | `string` | `"10.2.0.0/16"` | no |
+| <a name="input_ip_network_public"></a> [ip\_network\_public](#input\_ip\_network\_public) | Network part of public CIDR | `string` | `"10.0.0.0/16"` | no |
 | <a name="input_nat_prefix"></a> [nat\_prefix](#input\_nat\_prefix) | Prefix for NAT. | `string` | `"nat"` | no |
 | <a name="input_peer_prefix"></a> [peer\_prefix](#input\_peer\_prefix) | Prefix for peering. | `string` | `"peer"` | no |
 | <a name="input_region"></a> [region](#input\_region) | The GCP region to create resources in. | `string` | `"us-east1"` | no |
@@ -97,7 +102,9 @@ terraform apply -var-file=terraform.tfvars
 | Name | Description |
 |------|-------------|
 | <a name="output_domain_name"></a> [domain\_name](#output\_domain\_name) | Domain name |
-| <a name="output_ip_network_mgmt"></a> [ip\_network\_mgmt](#output\_ip\_network\_mgmt) | Network part of management CIDR |
+| <a name="output_ip_network_management"></a> [ip\_network\_management](#output\_ip\_network\_management) | Network part of management CIDR |
+| <a name="output_ip_network_private"></a> [ip\_network\_private](#output\_ip\_network\_private) | Network part of private CIDR |
+| <a name="output_ip_network_public"></a> [ip\_network\_public](#output\_ip\_network\_public) | Network part of public CIDR |
 | <a name="output_network_link_management"></a> [network\_link\_management](#output\_network\_link\_management) | Self link of management network |
 | <a name="output_network_link_private"></a> [network\_link\_private](#output\_network\_link\_private) | Self link of private network |
 | <a name="output_network_link_public"></a> [network\_link\_public](#output\_network\_link\_public) | Self link of public network |
