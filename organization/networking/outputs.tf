@@ -8,9 +8,19 @@ output "remote_access_cidrs" {
   value       = var.remote_access_cidrs
 }
 
-output "ip_network_mgmt" {
+output "ip_network_public" {
+  description = "Network part of public CIDR"
+  value       = var.ip_network_public
+}
+
+output "ip_network_management" {
   description = "Network part of management CIDR"
-  value       = var.ip_network_mgmt
+  value       = var.ip_network_management
+}
+
+output "ip_network_private" {
+  description = "Network part of private CIDR"
+  value       = var.ip_network_private
 }
 
 output "subnets_public" {
