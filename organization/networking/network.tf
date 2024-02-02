@@ -7,7 +7,7 @@ module "public" {
   subnets = [
     {
       subnet_name   = "${var.subnet_prefix}-public-firewall"
-      subnet_ip     = "10.0.0.0/23"
+      subnet_ip     = module.subnets_public.network_cidr_blocks["firewall"]
       subnet_region = var.region
     }
   ]
@@ -23,7 +23,7 @@ module "management" {
   subnets = [
     {
       subnet_name   = "${var.subnet_prefix}-management-firewall"
-      subnet_ip     = "10.1.0.0/23"
+      subnet_ip     = module.subnets_management.network_cidr_blocks["firewall"]
       subnet_region = var.region
     }
   ]
@@ -38,37 +38,37 @@ module "private" {
   subnets = [
     {
       subnet_name   = "${var.subnet_prefix}-private-firewall"
-      subnet_ip     = "${var.ip_network_mgmt}.0.0/23"
+      subnet_ip     = module.subnets_private.network_cidr_blocks["firewall"]
       subnet_region = var.region
     },
     {
       subnet_name   = "${var.subnet_prefix}-private-iam"
-      subnet_ip     = "${var.ip_network_mgmt}.2.0/23"
+      subnet_ip     = module.subnets_private.network_cidr_blocks["iam"]
       subnet_region = var.region
     },
     {
       subnet_name   = "${var.subnet_prefix}-private-cicd"
-      subnet_ip     = "${var.ip_network_mgmt}.4.0/23"
+      subnet_ip     = module.subnets_private.network_cidr_blocks["cicd"]
       subnet_region = var.region
     },
     {
       subnet_name   = "${var.subnet_prefix}-private-secops"
-      subnet_ip     = "${var.ip_network_mgmt}.6.0/23"
+      subnet_ip     = module.subnets_private.network_cidr_blocks["secops"]
       subnet_region = var.region
     },
     {
       subnet_name   = "${var.subnet_prefix}-private-siem"
-      subnet_ip     = "${var.ip_network_mgmt}.8.0/23"
+      subnet_ip     = module.subnets_private.network_cidr_blocks["siem"]
       subnet_region = var.region
     },
     {
       subnet_name   = "${var.subnet_prefix}-private-monitoring"
-      subnet_ip     = "${var.ip_network_mgmt}.10.0/23"
+      subnet_ip     = module.subnets_private.network_cidr_blocks["monitoring"]
       subnet_region = var.region
     },
     {
       subnet_name   = "${var.subnet_prefix}-private-dmz"
-      subnet_ip     = "${var.ip_network_mgmt}.100.0/23"
+      subnet_ip     = module.subnets_private.network_cidr_blocks["dmz"]
       subnet_region = var.region
     }
   ]
@@ -89,7 +89,7 @@ module "private-service-access" {
 
   network       = module.private.network_name
   name          = "${var.subnet_prefix}-private-psa"
-  peering_range = "${var.ip_network_mgmt}.12.0/23"
+  peering_range = module.subnets_private.network_cidr_blocks["psa"]
 
   depends_on = [module.private]
 }
@@ -102,7 +102,7 @@ resource "google_compute_subnetwork" "private_l7lb" {
   name          = "${var.subnet_prefix}-private-proxy"
   purpose       = "INTERNAL_HTTPS_LOAD_BALANCER"
   role          = "ACTIVE"
-  ip_cidr_range = "${var.ip_network_mgmt}.14.0/23"
+  ip_cidr_range = module.subnets_private.network_cidr_blocks["proxy"]
   network       = module.private.network_id
 }
 

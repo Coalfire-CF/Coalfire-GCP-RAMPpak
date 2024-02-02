@@ -9,10 +9,22 @@ variable "region" {
   default     = "us-east1"
 }
 
-variable "ip_network_mgmt" {
+variable "ip_network_public" {
+  description = "Network part of public CIDR"
+  type        = string
+  default     = "10.0.0.0/16"
+}
+
+variable "ip_network_management" {
   description = "Network part of management CIDR"
   type        = string
-  default     = "10.2"
+  default     = "10.1.0.0/16"
+}
+
+variable "ip_network_private" {
+  description = "Network part of private CIDR"
+  type        = string
+  default     = "10.2.0.0/16"
 }
 
 variable "remote_access_cidrs" {
