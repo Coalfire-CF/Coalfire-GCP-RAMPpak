@@ -52,8 +52,8 @@ terraform apply -var-file=terraform.tfvars
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_bastion-svc-acct"></a> [bastion-svc-acct](#module\_bastion-svc-acct) | github.com/Coalfire-CF/terraform-google-service-account | n/a |
-| <a name="module_windows-bastion"></a> [windows-bastion](#module\_windows-bastion) | github.com/Coalfire-CF/terraform-google-vm | n/a |
+| <a name="module_bastion_svc_acct"></a> [bastion\_svc\_acct](#module\_bastion\_svc\_acct) | github.com/Coalfire-CF/terraform-google-service-account | n/a |
+| <a name="module_windows_bastion"></a> [windows\_bastion](#module\_windows\_bastion) | github.com/Coalfire-CF/terraform-google-vm | n/a |
 
 ## Resources
 
@@ -63,7 +63,7 @@ terraform apply -var-file=terraform.tfvars
 | [google_compute_image.windows_golden](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/compute_image) | data source |
 | [google_compute_zones.available](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/compute_zones) | data source |
 | [terraform_remote_state.networking](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
-| [terraform_remote_state.security-core](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
+| [terraform_remote_state.security_core](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 
 ## Inputs
 

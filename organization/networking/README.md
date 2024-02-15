@@ -61,9 +61,9 @@ terraform apply -var-file=terraform.tfvars
 | <a name="module_cloud_router"></a> [cloud\_router](#module\_cloud\_router) | github.com/Coalfire-CF/terraform-google-cloud-router | n/a |
 | <a name="module_management"></a> [management](#module\_management) | github.com/Coalfire-CF/terraform-google-network | n/a |
 | <a name="module_private"></a> [private](#module\_private) | github.com/Coalfire-CF/terraform-google-network | n/a |
-| <a name="module_private-fw"></a> [private-fw](#module\_private-fw) | github.com/Coalfire-CF/terraform-google-network/modules/firewall-rules | n/a |
-| <a name="module_private-management-peering"></a> [private-management-peering](#module\_private-management-peering) | github.com/Coalfire-CF/terraform-google-network/modules/network-peering | n/a |
-| <a name="module_private-service-access"></a> [private-service-access](#module\_private-service-access) | github.com/Coalfire-CF/ACE-GCP-Private-Service-Access | n/a |
+| <a name="module_private_fw"></a> [private\_fw](#module\_private\_fw) | github.com/Coalfire-CF/terraform-google-network/modules/firewall-rules | n/a |
+| <a name="module_private_management_peering"></a> [private\_management\_peering](#module\_private\_management\_peering) | github.com/Coalfire-CF/terraform-google-network/modules/network-peering | n/a |
+| <a name="module_private_service_access"></a> [private\_service\_access](#module\_private\_service\_access) | github.com/Coalfire-CF/ACE-GCP-Private-Service-Access | n/a |
 | <a name="module_public"></a> [public](#module\_public) | github.com/Coalfire-CF/terraform-google-network | n/a |
 | <a name="module_subnets_management"></a> [subnets\_management](#module\_subnets\_management) | hashicorp/subnets/cidr | n/a |
 | <a name="module_subnets_private"></a> [subnets\_private](#module\_subnets\_private) | hashicorp/subnets/cidr | n/a |
@@ -76,7 +76,7 @@ terraform apply -var-file=terraform.tfvars
 | [google-beta_google_compute_subnetwork.private_l7lb](https://registry.terraform.io/providers/hashicorp/google-beta/latest/docs/resources/google_compute_subnetwork) | resource |
 | [google_compute_shared_vpc_service_project.networking_management](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_shared_vpc_service_project) | resource |
 | [google_dns_policy.dns_logging](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/dns_policy) | resource |
-| [terraform_remote_state.security-core](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
+| [terraform_remote_state.security_core](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 
 ## Inputs
 

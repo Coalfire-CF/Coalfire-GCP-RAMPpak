@@ -71,7 +71,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_security-core"></a> [security-core](#module\_security-core) | github.com/Coalfire-CF/terraform-google-security-core | n/a |
+| <a name="module_security_core"></a> [security\_core](#module\_security\_core) | github.com/Coalfire-CF/terraform-google-security-core | refactor |
 
 ## Resources
 
@@ -93,13 +93,13 @@ No resources.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_gce-ssh-private-key"></a> [gce-ssh-private-key](#output\_gce-ssh-private-key) | n/a |
 | <a name="output_gce_kms_key_id"></a> [gce\_kms\_key\_id](#output\_gce\_kms\_key\_id) | n/a |
+| <a name="output_gce_ssh_private_key"></a> [gce\_ssh\_private\_key](#output\_gce\_ssh\_private\_key) | n/a |
 | <a name="output_gcs_kms_key_id"></a> [gcs\_kms\_key\_id](#output\_gcs\_kms\_key\_id) | n/a |
 | <a name="output_group_org_admins"></a> [group\_org\_admins](#output\_group\_org\_admins) | n/a |
 | <a name="output_gsm_kms_key_id"></a> [gsm\_kms\_key\_id](#output\_gsm\_kms\_key\_id) | n/a |
 | <a name="output_management_project_id"></a> [management\_project\_id](#output\_management\_project\_id) | n/a |
 | <a name="output_networking_project_id"></a> [networking\_project\_id](#output\_networking\_project\_id) | n/a |
 | <a name="output_sql_kms_key_id"></a> [sql\_kms\_key\_id](#output\_sql\_kms\_key\_id) | n/a |
-| <a name="output_winbastion-administrator"></a> [winbastion-administrator](#output\_winbastion-administrator) | n/a |
+| <a name="output_winbastion_administrator"></a> [winbastion\_administrator](#output\_winbastion\_administrator) | n/a |
 <!-- END_TF_DOCS -->
