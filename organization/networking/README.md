@@ -113,6 +113,9 @@ terraform apply -var-file=terraform.tfvars
 | <a name="output_network_public"></a> [network\_public](#output\_network\_public) | Name of public network |
 | <a name="output_remote_access_cidrs"></a> [remote\_access\_cidrs](#output\_remote\_access\_cidrs) | List of IPv4 CIDR ranges to access all admins remote access |
 | <a name="output_subnets_management"></a> [subnets\_management](#output\_subnets\_management) | Map of management subnet names and IDs |
+| <a name="output_subnets_management_cidr"></a> [subnets\_management\_cidr](#output\_subnets\_management\_cidr) | Map of management subnet names and CIDRs |
 | <a name="output_subnets_private"></a> [subnets\_private](#output\_subnets\_private) | Map of private subnet names and IDs |
+| <a name="output_subnets_private_cidr"></a> [subnets\_private\_cidr](#output\_subnets\_private\_cidr) | Map of private subnet names and CIDRs |
 | <a name="output_subnets_public"></a> [subnets\_public](#output\_subnets\_public) | Map of public subnet names and IDs |
+| <a name="output_subnets_public_cidr"></a> [subnets\_public\_cidr](#output\_subnets\_public\_cidr) | Map of public subnet names and CIDRs |
 <!-- END_TF_DOCS -->
