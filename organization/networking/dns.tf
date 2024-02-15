@@ -1,5 +1,5 @@
 resource "google_dns_policy" "dns_logging" {
-  project = data.terraform_remote_state.security-core.outputs.networking_project_id
+  project = data.terraform_remote_state.security_core.outputs.networking_project_id
   name    = "${var.dns_prefix}-logging"
 
   enable_inbound_forwarding = true

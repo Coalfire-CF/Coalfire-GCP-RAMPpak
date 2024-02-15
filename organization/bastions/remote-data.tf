@@ -1,4 +1,4 @@
-data "terraform_remote_state" "security-core" {
+data "terraform_remote_state" "security_core" {
   backend = "gcs"
   config = {
     bucket = var.state_bucket

@@ -1,4 +1,4 @@
-module "security-core" {
+module "security_core" {
   source = "github.com/Coalfire-CF/terraform-google-security-core"
 
   org_id           = var.org_id

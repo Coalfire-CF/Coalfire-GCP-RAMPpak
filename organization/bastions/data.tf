@@ -1,5 +1,5 @@
 data "google_compute_zones" "available" {
-  project = data.terraform_remote_state.security-core.outputs.management_project_id
+  project = data.terraform_remote_state.security_core.outputs.management_project_id
   region  = var.region
 }
 
