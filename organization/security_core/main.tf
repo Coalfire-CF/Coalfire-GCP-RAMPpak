@@ -1,5 +1,5 @@
-module "security-core" {
-  source = "github.com/Coalfire-CF/terraform-google-security-core"
+module "security_core" {
+  source = "github.com/Coalfire-CF/terraform-google-security-core?ref=refactor"
 
   org_id           = var.org_id
   aw_folder_id     = var.aw_folder_id

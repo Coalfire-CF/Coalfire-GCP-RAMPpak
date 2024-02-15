@@ -1,7 +1,7 @@
-module "private-fw" {
+module "private_fw" {
   source = "github.com/Coalfire-CF/terraform-google-network/modules/firewall-rules"
 
-  project_id   = data.terraform_remote_state.security-core.outputs.networking_project_id
+  project_id   = data.terraform_remote_state.security_core.outputs.networking_project_id
   network_name = module.private.network_name
 
   rules = [
