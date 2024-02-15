@@ -71,7 +71,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_security_core"></a> [security\_core](#module\_security\_core) | github.com/Coalfire-CF/terraform-google-security-core | refactor |
+| <a name="module_security_core"></a> [security\_core](#module\_security\_core) | github.com/Coalfire-CF/terraform-google-security-core | n/a |
 
 ## Resources
 
