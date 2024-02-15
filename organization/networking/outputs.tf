@@ -28,14 +28,29 @@ output "subnets_public" {
   value       = zipmap([for name in module.public.subnets_names : replace(name, "${var.subnet_prefix}-public-", "")], module.public.subnets_ids)
 }
 
+output "subnets_public_cidr" {
+  description = "Map of public subnet names and CIDRs"
+  value       = zipmap([for name in module.public.subnets_names : replace(name, "${var.subnet_prefix}-public-", "")], module.public.subnets_ips)
+}
+
 output "subnets_management" {
   description = "Map of management subnet names and IDs"
   value       = zipmap([for name in module.management.subnets_names : replace(name, "${var.subnet_prefix}-management-", "")], module.management.subnets_ids)
 }
 
+output "subnets_management_cidr" {
+  description = "Map of management subnet names and CIDRs"
+  value       = zipmap([for name in module.management.subnets_names : replace(name, "${var.subnet_prefix}-management-", "")], module.management.subnets_ips)
+}
+
 output "subnets_private" {
   description = "Map of private subnet names and IDs"
   value       = zipmap([for name in module.private.subnets_names : replace(name, "${var.subnet_prefix}-private-", "")], module.private.subnets_ids)
+}
+
+output "subnets_private_cidr" {
+  description = "Map of private subnet names and CIDRs"
+  value       = zipmap([for name in module.private.subnets_names : replace(name, "${var.subnet_prefix}-private-", "")], module.private.subnets_ips)
 }
 
 output "network_public" {
