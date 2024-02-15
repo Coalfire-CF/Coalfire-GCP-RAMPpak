@@ -36,13 +36,13 @@ Learn more at [Coalfire OpenSource](https://coalfire.com/opensource).
 ## Deployment Order of Operations
 
 1. Dependencies
-2. [Security Core](organization/security-core/README.md)
+2. [Security Core](organization/security_core/README.md)
 3. [Networking Setup](organization/networking/README.md)
 5. [Bastions](organization/bastions/README.md)
 
 ## Deployment Configurations
 
-Each folder, e.x. `organization/security-core` has a README that provides configuration steps, documents outputs, dependencies, and other notes on each component in the environment.
+Each folder, e.x. `organization/security_core` has a README that provides configuration steps, documents outputs, dependencies, and other notes on each component in the environment.
 
 ### Modifications when new Admins are added
 
