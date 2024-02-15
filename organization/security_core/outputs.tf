@@ -11,19 +11,19 @@ output "networking_project_id" {
 }
 
 output "gce_kms_key_id" {
-  value = module.security_core.kms_keys["compute_engine"]
+  value = module.security_core.kms_keys["compute-engine"]
 }
 
 output "gsm_kms_key_id" {
-  value = module.security_core.kms_keys["secret_manager"]
+  value = module.security_core.kms_keys["secret-manager"]
 }
 
 output "gcs_kms_key_id" {
-  value = module.security_core.kms_keys["cloud_storage"]
+  value = module.security_core.kms_keys["cloud-storage"]
 }
 
 output "sql_kms_key_id" {
-  value = module.security_core.kms_keys["cloud_sql"]
+  value = module.security_core.kms_keys["cloud-sql"]
 }
 
 output "gce_ssh_private_key" {
