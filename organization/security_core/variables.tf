@@ -28,6 +28,7 @@ variable "management_services" {
     "monitoring.googleapis.com",
     "pubsub.googleapis.com",
     "secretmanager.googleapis.com",
+    "servicenetworking.googleapis.com",
     "sourcerepo.googleapis.com"
   ]
 }
