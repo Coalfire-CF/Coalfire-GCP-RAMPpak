@@ -7,6 +7,8 @@ module "cloud_router" {
   region  = var.region
 
   nats = [{
-    name = "${var.nat_prefix}-private"
+    name                                = "${var.nat_prefix}-private"
+    enable_dynamic_port_allocation      = true
+    enable_endpoint_independent_mapping = false
   }]
 }
