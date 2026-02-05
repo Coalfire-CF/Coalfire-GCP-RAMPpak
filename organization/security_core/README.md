@@ -19,7 +19,7 @@ The purpose of this module is to help bootstrap a GCP organization, creating all
 
 ### Create .tfvars file
 
-Comment out the GCS backend in `organization/bootstrap/tstate.tf`.
+Comment out the GCS backend in `organization/security-core/tstate.tf`.
 
 Use the example below, replacing it with your values, and save it as `terraform.tfvars`.
 
@@ -28,6 +28,8 @@ org_id           = "your-org-id"
 aw_folder_id     = "your-aw-folder-id"
 billing_account  = "your-billing-account"
 group_org_admins = "grp-gcp-org-admins@your-domain.com"
+workspace_id     = "your-workspace-id"
+region           = "your-gcp-region"
 ```
 
 ### Run Terraform
@@ -41,7 +43,7 @@ terraform apply -var-file=terraform.tfvars
 
 ### Migrate local state to remote
 
-Uncomment the GCS backend in `organization/bootstrap/tstate.tf`.
+Uncomment the GCS backend in `organization/security-core/tstate.tf`.
 
 Use the example below, replacing it with your values, and save it as `backend.tfvars`.
 

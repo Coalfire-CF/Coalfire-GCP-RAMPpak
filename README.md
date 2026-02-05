@@ -23,10 +23,16 @@ Learn more at [Coalfire OpenSource](https://coalfire.com/opensource).
 1. [Setup Cloud Identity](https://cloud.google.com/identity/docs/set-up-cloud-identity-admin) and [verify your domain](https://cloud.google.com/identity/docs/verify-domain).
 2. After Cloud Identity has been configured, [create an organization](https://cloud.google.com/resource-manager/docs/creating-managing-organization).
     - Turn on 2-Step Verification enforcement.
-3. Create `grp-gcp-org-admins@your-domain.com` group in Cloud Identity and add members.
+3. Create a [Cloud Billing account](https://docs.cloud.google.com/billing/docs/how-to/create-billing-account). Ensure you have the [required permissions](https://docs.cloud.google.com/billing/docs/how-to/create-billing-account#required-permissions) to create a Cloud Billing account.
+4. Create `grp-gcp-org-admins@your-domain.com` group in Cloud Identity and add members.
     - Add **Security** label to group.
     - Select **Restricted** Access type.
-4. Create FedRAMP Moderate Assured Workloads folder in [Cloud Console](https://console.cloud.google.com/) on the **Assured Workloads** page. Assured Workloads is required for FedRAMP compliance as Google doesn't have a GovCloud offering.
+5. Grant IAM roles to the admin group at the organization level:
+    - **Organization Administrator** (`roles/resourcemanager.organizationAdmin`)
+    - **Billing Account Administrator** (`roles/billing.admin`)
+    - **Project Creator** (`roles/resourcemanager.projectCreator`)
+    - **Folder Admin** (`roles/resourcemanager.folderAdmin`)
+6. Create FedRAMP Moderate Assured Workloads folder in [Cloud Console](https://console.cloud.google.com/) on the **Assured Workloads** page. Assured Workloads is required for FedRAMP compliance as Google doesn't have a GovCloud offering.
     - Compliance type: **FedRAMP Moderate**
     - Region: **US**
     - Folder location: **choose organization**
@@ -38,7 +44,8 @@ Learn more at [Coalfire OpenSource](https://coalfire.com/opensource).
 1. Dependencies
 2. [Security Core](organization/security_core/README.md)
 3. [Networking Setup](organization/networking/README.md)
-5. [Bastions](organization/bastions/README.md)
+4. [Bastions](organization/bastions/README.md)
+5. Update DNS nameservers at registrar (after Cloud DNS zones are created)
 
 ## Deployment Configurations
 
