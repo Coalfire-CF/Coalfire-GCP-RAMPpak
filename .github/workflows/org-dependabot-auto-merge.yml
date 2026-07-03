@@ -1,0 +1,28 @@
+name: Dependabot Auto-Merge
+
+# Evaluates Dependabot PRs for auto-merge eligibility using the org reusable
+# workflow: supply-chain checks (OSV + OpenSSF Scorecard), breaking-change
+# detection (semver + AI changelog analysis), then approves + auto-merges or
+# labels for manual review. Installed fleet-wide by the v0.8 unified wave.
+#
+# Uses pull_request_target (not pull_request) so the workflow has write
+# permissions on Dependabot PRs. The reusable workflow only reads metadata
+# from the PR branch, never executes code from it.
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
+
+jobs:
+  auto-merge:
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    uses: Coalfire-CF/Actions/.github/workflows/org-dependabot-auto-merge.yml@3ce5211dee2e8758e2e992b13371e3e85517cfbd # v0.8.1
+    secrets: inherit
