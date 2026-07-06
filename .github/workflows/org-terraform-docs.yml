@@ -5,6 +5,6 @@ on:
 
 jobs:
   terraform-docs:
-    uses: Coalfire-CF/Actions/.github/workflows/org-terraform-docs.yml@f1183271357ddaaa090a33c1b722133f874ef86d # v0.8.2
+    uses: Coalfire-CF/Actions/.github/workflows/org-terraform-docs.yml@f6f14772b623150ffc6ca409b623003a8770f103 # v0.11.2
     with:
       find-dir: organization
