@@ -24,5 +24,5 @@ permissions:
 jobs:
   auto-merge:
     if: github.event.pull_request.user.login == 'dependabot[bot]'
-    uses: Coalfire-CF/Actions/.github/workflows/org-dependabot-auto-merge.yml@f1183271357ddaaa090a33c1b722133f874ef86d # v0.8.2
+    uses: Coalfire-CF/Actions/.github/workflows/org-dependabot-auto-merge.yml@f6f14772b623150ffc6ca409b623003a8770f103 # v0.11.2
     secrets: inherit
