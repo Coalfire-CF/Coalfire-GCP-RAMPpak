@@ -9,4 +9,4 @@ on:
 
 jobs:
   check-markdown:
-    uses: Coalfire-CF/Actions/.github/workflows/org-markdown-lint.yml@df5fe1a0ee9068473c763609fc1d20c66df6ef94 # v0.14.0
+    uses: Coalfire-CF/Actions/.github/workflows/org-markdown-lint.yml@0324cf8a90b4b9c523465f53a892a722f613e318 # v0.15.0
