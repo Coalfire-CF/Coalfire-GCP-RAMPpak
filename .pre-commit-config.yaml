@@ -1,0 +1,30 @@
+# Regenerates README.md from _header.md, _footer.md and the module's Terraform
+# before the commit lands, so CI only has to verify and never pushes to a PR
+# branch.
+#
+# Install once per clone:
+#     pre-commit install
+#
+# The pinned container is deliberate. terraform-docs 0.20.0 is what CI runs, and
+# its output differs from 0.24.0 (delimiter row padding), so a brew-installed
+# binary would generate a README that CI reports as out of date. Homebrew ships
+# only the latest formula, so the container is the one route that gives every
+# developer the same bytes as CI.
+#
+# Requires Docker. On macOS, Docker Desktop only shares certain paths: a clone
+# under /tmp will mount empty and terraform-docs will report a missing config.
+# Keep clones under your home directory.
+repos:
+  - repo: local
+    hooks:
+      - id: terraform-docs
+        name: terraform-docs (pinned 0.20.0, matches CI)
+        # Each documented directory has its own .terraform-docs.yml and partials.
+        entry: >-
+          bash -c 'set -e; for d in organization/networking organization/bastions organization/security_core; do
+          docker run --rm -v "$PWD/$d:/w" -w /w
+          quay.io/terraform-docs/terraform-docs:0.20.0
+          markdown table -c .terraform-docs.yml .; done'
+        language: system
+        pass_filenames: false
+        files: '\.(tf|md)$'

@@ -1,0 +1,10 @@
+name: "CI: Terraform docs"
+on:
+    pull_request:
+    workflow_call:
+
+jobs:
+  terraform-docs:
+    uses: Coalfire-CF/Actions/.github/workflows/ci-terraform-docs.yml@75e8abf9598f9962669fcafb1e5d86ac007ef843 # v1.0.1
+    with:
+      find-dir: organization
