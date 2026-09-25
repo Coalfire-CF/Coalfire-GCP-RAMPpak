@@ -1,0 +1,12 @@
+name: "Release: Release Please"
+on:
+    pull_request:
+        types:
+        - closed
+        branches:
+        - main
+
+jobs:
+  create-release:
+    uses: Coalfire-CF/Actions/.github/workflows/release-please.yml@88e02c851b87f8042147e1ba9f340b49ab1b628b # v1.0.0
+    secrets: inherit
