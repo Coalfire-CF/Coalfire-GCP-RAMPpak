@@ -1,4 +1,4 @@
-name: Dependabot Auto-Merge
+name: "Automation: Dependabot auto-merge"
 
 # Evaluates Dependabot PRs for auto-merge via the org reusable workflow
 # (supply-chain + breaking-change checks, then approve + bypass-merge on green).
@@ -24,5 +24,7 @@ jobs:
     if: >-
       github.event_name == 'check_suite' ||
       github.event.pull_request.user.login == 'dependabot[bot]'
-    uses: Coalfire-CF/Actions/.github/workflows/org-dependabot-auto-merge.yml@23aae589e2eb9c009fad0da45899db6ae59e8d02 # v0.16.0
+    uses: Coalfire-CF/Actions/.github/workflows/automation-dependabot-auto-merge.yml@88e02c851b87f8042147e1ba9f340b49ab1b628b # v1.0.0
+    with:
+      actions_ref: 88e02c851b87f8042147e1ba9f340b49ab1b628b # v1.0.0
     secrets: inherit
