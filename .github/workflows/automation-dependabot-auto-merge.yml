@@ -24,5 +24,5 @@ jobs:
     if: >-
       github.event_name == 'check_suite' ||
       github.event.pull_request.user.login == 'dependabot[bot]'
-    uses: Coalfire-CF/Actions/.github/workflows/automation-dependabot-auto-merge.yml@7e2de0438dd4d4d4b302900dd2be9bb16ec276a2 # v1.3.0
+    uses: Coalfire-CF/Actions/.github/workflows/automation-dependabot-auto-merge.yml@e833f409d1d1fd8014f3de1efd077785d3dae460 # v1.5.0
     secrets: inherit
