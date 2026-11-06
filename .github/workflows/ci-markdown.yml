@@ -7,4 +7,4 @@ on:
 
 jobs:
   check-markdown:
-    uses: Coalfire-CF/Actions/.github/workflows/ci-markdown.yml@7e2de0438dd4d4d4b302900dd2be9bb16ec276a2 # v1.3.0
+    uses: Coalfire-CF/Actions/.github/workflows/ci-markdown.yml@ff2ce86f31c3ca42c0dcefbd4d3e53a68f99759c # v1.7.0
