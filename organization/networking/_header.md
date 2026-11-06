@@ -1,6 +1,7 @@
 # Networking Setup
 
-The purpose of this module is to deploy the cloud networking components to support the security management and application planes. This module will create:
+The purpose of this module is to deploy the cloud networking components to support the security management and
+application planes. This module will create:
 
 - Public, management and private networks and subnets
 - Firewall rules

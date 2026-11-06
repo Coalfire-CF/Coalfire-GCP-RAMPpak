@@ -2,11 +2,13 @@
 
 # Coalfire GCP RAMPpak
 
-Coalfire created reference architecture for FedRAMP Google Cloud builds. This repository is used as a parent directory to deploy `Coalfire-CF/terraform-google-<service>` modules.
+Coalfire created reference architecture for FedRAMP Google Cloud builds. This repository is used as a parent directory
+to deploy `Coalfire-CF/terraform-google-<service>` modules.
 
 Learn more at [Coalfire OpenSource](https://coalfire.com/opensource).
 
-[Get our SSP Templates and Reference Architecture Design Document Template](https://www.coalfire.com/services/fedramp/ramp-pak-documentation)
+[Get our SSP Templates and Reference Architecture Design Document
+Template](https://www.coalfire.com/services/fedramp/ramp-pak-documentation)
 
 ## Architecture
 
@@ -20,10 +22,15 @@ Learn more at [Coalfire OpenSource](https://coalfire.com/opensource).
 
 ## Dependencies
 
-1. [Setup Cloud Identity](https://cloud.google.com/identity/docs/set-up-cloud-identity-admin) and [verify your domain](https://cloud.google.com/identity/docs/verify-domain).
-2. After Cloud Identity has been configured, [create an organization](https://cloud.google.com/resource-manager/docs/creating-managing-organization).
+1. [Setup Cloud Identity](https://cloud.google.com/identity/docs/set-up-cloud-identity-admin) and [verify your
+   domain](https://cloud.google.com/identity/docs/verify-domain).
+2. After Cloud Identity has been configured, [create an
+   organization](https://cloud.google.com/resource-manager/docs/creating-managing-organization).
     - Turn on 2-Step Verification enforcement.
-3. Create a [Cloud Billing account](https://docs.cloud.google.com/billing/docs/how-to/create-billing-account). Ensure you have the [required permissions](https://docs.cloud.google.com/billing/docs/how-to/create-billing-account#required-permissions) to create a Cloud Billing account.
+3. Create a [Cloud Billing account](https://docs.cloud.google.com/billing/docs/how-to/create-billing-account). Ensure
+   you have the [required
+   permissions](https://docs.cloud.google.com/billing/docs/how-to/create-billing-account#required-permissions) to create
+   a Cloud Billing account.
 4. Create `grp-gcp-org-admins@your-domain.com` group in Cloud Identity and add members.
     - Add **Security** label to group.
     - Select **Restricted** Access type.
@@ -32,7 +39,9 @@ Learn more at [Coalfire OpenSource](https://coalfire.com/opensource).
     - **Billing Account Administrator** (`roles/billing.admin`)
     - **Project Creator** (`roles/resourcemanager.projectCreator`)
     - **Folder Admin** (`roles/resourcemanager.folderAdmin`)
-6. Create FedRAMP Moderate Assured Workloads folder in [Cloud Console](https://console.cloud.google.com/) on the **Assured Workloads** page. Assured Workloads is required for FedRAMP compliance as Google doesn't have a GovCloud offering.
+6. Create FedRAMP Moderate Assured Workloads folder in [Cloud Console](https://console.cloud.google.com/) on the
+   **Assured Workloads** page. Assured Workloads is required for FedRAMP compliance as Google doesn't have a GovCloud
+   offering.
     - Compliance type: **FedRAMP Moderate**
     - Region: **US**
     - Folder location: **choose organization**
@@ -49,7 +58,8 @@ Learn more at [Coalfire OpenSource](https://coalfire.com/opensource).
 
 ## Deployment Configurations
 
-Each folder, e.x. `organization/security_core` has a README that provides configuration steps, documents outputs, dependencies, and other notes on each component in the environment.
+Each folder, e.x. `organization/security_core` has a README that provides configuration steps, documents outputs,
+dependencies, and other notes on each component in the environment.
 
 ### Modifications when new Admins are added
 
@@ -58,21 +68,25 @@ Each folder, e.x. `organization/security_core` has a README that provides config
 
 ## Environment Setup
 
-- Download and install the gcloud CLI - https://cloud.google.com/sdk/gcloud#download_and_install_the
+- Download and install the gcloud CLI - <https://cloud.google.com/sdk/gcloud#download_and_install_the>
 - Create a new configuration - `gcloud config configurations create <name>`
 - Activate the new configuration - `gcloud config configurations activate <name>`
 - Authenticate gcloud with new configuration - `gcloud auth application-default login`
 
 ## Resources
 
-- [Creating and managing organization resources](https://cloud.google.com/resource-manager/docs/creating-managing-organization#acquiring)
+- [Creating and managing organization
+  resources](https://cloud.google.com/resource-manager/docs/creating-managing-organization#acquiring)
 - [Create an Assured Workloads folder](https://cloud.google.com/assured-workloads/docs/create-folder)
 - [Google Cloud FedRAMP implementation guide](https://cloud.google.com/architecture/fedramp-implementation-guide)
-- [Google Cloud services and authorized regions that are covered by FedRAMP](https://cloud.google.com/security/compliance/fedramp)
+- [Google Cloud services and authorized regions that are covered by
+  FedRAMP](https://cloud.google.com/security/compliance/fedramp)
 
 ## Contributing
 
-If you're interested in contributing to our projects, please review the [Contributing Guidelines](CONTRIBUTING.md). And send an email to [our team](mailto:contributing@coalfire.com) to receive a copy of our CLA and start the onboarding process.
+If you're interested in contributing to our projects, please review the [Contributing Guidelines](CONTRIBUTING.md). And
+send an email to [our team](mailto:contributing@coalfire.com) to receive a copy of our CLA and start the onboarding
+process.
 
 ## License
 
