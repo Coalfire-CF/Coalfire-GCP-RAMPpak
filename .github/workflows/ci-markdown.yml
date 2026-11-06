@@ -1,8 +1,6 @@
 name: "CI: Markdown"
 on:
     pull_request:
-      paths:
-        - '**.md'
       branches:
         - main
     workflow_call:

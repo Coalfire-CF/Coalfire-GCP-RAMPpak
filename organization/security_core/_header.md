@@ -1,6 +1,8 @@
 # Security Core
 
-The purpose of this module is to help bootstrap a GCP organization, creating all the required GCP resources to start deploying the FedRAMP reference architecture. The bootstrap is a dependency for all other deployment components. This module will create:
+The purpose of this module is to help bootstrap a GCP organization, creating all the required GCP resources to start
+deploying the FedRAMP reference architecture. The bootstrap is a dependency for all other deployment components. This
+module will create:
 
 - Folders and Projects under the Assured Workloads folder
 - Activate required APIs & Services in projects
